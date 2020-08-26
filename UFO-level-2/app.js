@@ -36,7 +36,11 @@ var inputValue = inputElement.property("value");
 console.log(inputValue);
 console.log(tableData);
 
-var filteredData = tableData.filter((date) => date.datetime === inputValue);
+var filteredData = tableData.filter((inputdata) => inputdata.datetime === inputValue ||
+                                                   inputdata.city === inputValue ||
+                                                   inputdata.state === inputValue ||
+                                                   inputdata.country === inputValue ||
+                                                   inputdata.shape === inputValue );
 
 console.log(filteredData);
 
